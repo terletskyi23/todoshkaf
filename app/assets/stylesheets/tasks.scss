@@ -1,0 +1,59 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#container {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+
+  #tasks, .filter-container {
+    border: 1px solid grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    padding: 15px;
+    .task {
+      padding: 15px;
+      .status{
+        float:right;
+        button{
+          margin:0;
+        }
+      }
+    }
+    .editable {
+      background: #dd2;
+    }
+    #edit-form {
+      background: #ff0;
+    }
+  }
+
+  form#new_task {
+    .error {
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      background-color: red;
+      padding: 15px;
+      color: white;
+      margin: 0;
+    }
+    input#task_description {
+      width: 500px;
+      line-height: 20px;
+      height: 24px;
+      border: 1px solid grey;
+      border-bottom-left-radius: 5px;
+    }
+    input[type="submit"] {
+      min-height: 28px;
+      width: 92px;
+      margin: 0;
+      border: 1px solid grey;
+      background-color: green;
+      color: white;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}

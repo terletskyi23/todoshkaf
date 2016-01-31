@@ -1,0 +1,5 @@
+<!-- app/views/tasks/_form.html.erb -->
+<%= form_for Task.new, method: :post do |f| %>
+  <%= f.text_field :description %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,0 +1,30 @@
+<h1>Tasks</h1>
+<div class="filter-container">
+  <span class="filter">
+    <button class="filter-button">All</button>
+    <button class="filter-button", disabled>Only In Progress</button>
+  </span>
+</div>
+  <div id="tasks">
+  <% @tasks.reverse_each do |task| %>
+    <% if task.status == 'in_progress'%>
+      <div class="task" id="<%= task.id %>">
+        <span class="status">
+            <button class="status-button", disabled>In Progress</button>
+            <button class="status-button">Done</button>
+    <%else%>
+      <div class="task done" id="<%= task.id %>">
+        <span class="status">
+            <button class="status-button">In Progress</button>
+            <button class="status-button", disabled>Done</button>
+    <%end%>
+      </span>
+      <p>
+        <%= task.description %>
+      </p>
+      <button class="edit-button">Edit</button>
+      <button class="destroy-button">Delete</button>
+    </div>
+  <% end %>
+  <%= render 'form' %>
+</div>
